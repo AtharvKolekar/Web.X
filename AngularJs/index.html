@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body ng-app="myApp">
+    
+    <div ng-controller="MainController">
+        <h1>Welcome to Angular JS Program</h1>
+        <p>Enter your name : <input type="text" ng-model="name"></p>
+
+        <p>welcome : {{ name }} </p>                        <!-- expression -->
+        <p>Name in uppercase : {{ name | uppercase }}</p>  <!--  filter -->
+        <p>Length of name : {{ name.length }} </p>
+    </div>
+
+</body>
+    <script>
+        var app = angular.module("myApp", []);
+
+        app.controller("MainController", function($scope){
+            $scope.name = "World";
+        });
+    </script>
+</html>
