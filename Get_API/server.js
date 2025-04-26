@@ -2,7 +2,7 @@ const express = require('express');
 
 const app = express();
 
-const PORT = 4000
+const PORT = 4000;
 
 const users = [
     { id: 1, name: 'A' },
